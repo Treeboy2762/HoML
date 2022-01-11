@@ -1,0 +1,29 @@
+1. Machine Learning is using machines to address task T that improves its performance P upon the data D.
+
+2. Machine learning is great for speech recognition, object detection and recognition (most famously face), anomaly detection (bank freud), and game AI.
+
+3. Labeled training has a set of dependent and independent variables.
+
+4. Classification and Regression, undoubtedly.
+
+5. Clustering
+
+Anomaly detection, visualizaiton, and asociation rule learning also count. I did not know reinforcement learning is neither supervised nor unsupervised.
+
+6. Reinforcement learning
+
+7. Clustering (k-means would be good)
+
+8. It depends on the data. If you have a set emails that are classified spam a priori, you can use that to train a supervised model. Otherwise, clustering should be used.
+
+9. Online learning system allows the machine to learn on the new data (which may not require Internet connection!).
+
+10. ?
+
+11. Clustering relies on similarity measures. Cosine distance, euclidean distance, and manhattan distance are famous measures of similarity.
+
+12. Model parameter is determined by learning through the data. Hyperparameter is determined before the learning takes place, and is subject to control by human.
+
+13. Model-based learning algorithms 
+
+14. Poor data, computational limitations, algorithmic limitations, and ?
