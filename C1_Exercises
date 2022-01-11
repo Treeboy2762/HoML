@@ -27,3 +27,13 @@ Anomaly detection, visualizaiton, and asociation rule learning also count. I did
 13. Model-based learning algorithms 
 
 14. Poor data, computational limitations, algorithmic limitations, and ?
+
+15. Overfitting (obviously). Three solutions are: adjusting the learning rate, using dropout / regularization, simplify the model, and introduce more training data.
+
+16. Test set is a set of data dedicated to measure the performance of the model. It is necessary for me to avoid overfitting.
+
+17. Validation set is used to adjust hyperparameters and select model.
+
+18. I think it's validation set?
+
+19. You may not generalize well to the real data
