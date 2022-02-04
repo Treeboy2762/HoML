@@ -5,6 +5,7 @@ Use gradient descent. Unlike Normal Equation and SVD (which has O(n^2.4) to O(n^
 2. Which algorithms suffer from varying scales across features? How should I address this issue?
 
 I recall that SVM suffers from this issue because the machine needs a uniform distance metrics to appropriately separate the entries. One popular solution to the problem is applying MinMaxScaling() to all features. I do not think that linear regression is affected by scaling issues.
+!!Gradient Descent may take longer time to converge, and regularized models may converge to suboptimal solution!!
 
 3. Can gradient descent get stuck in a local minimum while training a Logistic Regression model?
 
@@ -34,6 +35,7 @@ Overfitting. First check whether the polynomial degree is suitable for the datas
 9. Suppose you are using ridge regrssion and the training error and validation error are almost equal and fairly high. Is this high bias or high variance? Should you increase the regularization hyperparameter alpha or reduce it?
 
 The model is suffering from high bias. Lower the regularization so that the model can have more freedom.
+!!This is called underfitting!!
 
 10. Why would you choose
 
