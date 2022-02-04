@@ -1,0 +1,54 @@
+1. Which Linear Regression algorithm can I use if I have a training set with millions of features..?
+
+Use gradient descent. Unlike Normal Equation and SVD (which has O(n^2.4) to O(n^3) complexity), gradient descent is relatively free from time complexity from number of features.
+
+2. Which algorithms suffer from varying scales across features? How should I address this issue?
+
+I recall that SVM suffers from this issue because the machine needs a uniform distance metrics to appropriately separate the entries. One popular solution to the problem is applying MinMaxScaling() to all features. I do not think that linear regression is affected by scaling issues.
+
+3. Can gradient descent get stuck in a local minimum while training a Logistic Regression model?
+
+No. Logistic Regression has a convex cost function (p. 144), so there is no local minimum.
+
+4. Do all gradient descent algorithms end up with the same model?
+
+No. If the cost function is not convex, the algorithm may end up in a local minimum. Also, large learning rate may blow up the training. 
+
+5. If I notice consistent increase in the validation error while using Batch Gradient Descent, what is happening and what is the fix?
+
+Overfitting can be suspected. Early stopping is the easy fix, while adding a regularization term is also worth consideration.
+
+6. Is it a good idea to stop mini-batch Gradient Descent after noticing in increase in the validation error?
+
+No. The validation error can fluctuate. Increase in the validation error does not imply that global minimum has been found.
+
+7. Which Gradient Descent algorithm will reach near optimum solution the fastest? Which will actually converge? How to make others converge as well?
+
+Stochastic Gradient Descent will reach near the solution fastest, but batch gradient descent will be the one to converge.
+As long as the algorithm is run for sufficiently long time, and learning rate is decreased near the minimum, the algorithm will converge.
+
+8. You observe a large gap between the training error and the validation error while training Polynomial Regression. What is happening? What are the three solutions?
+
+Overfitting. First check whether the polynomial degree is suitable for the dataset. For instance, the model may be training on excessively high degree. Then, apply L1/L2 regularization (or consider elastic net). If none of these helps, find more data to feed.
+
+9. Suppose you are using ridge regrssion and the training error and validation error are almost equal and fairly high. Is this high bias or high variance? Should you increase the regularization hyperparameter alpha or reduce it?
+
+The model is suffering from high bias. Lower the regularization so that the model can have more freedom.
+
+10. Why would you choose
+
+a. Ridge Regression over plain Linear Regression?
+
+  This one is obvious. Plain Linear Regression is vulnerable to overfitting, especially due to high weights.
+  
+b. Lasso instead over Ridge?
+
+   Lasso can be used to eliminate trivial features. It will be great especially if you want to avoid complex results.
+   
+c. Elastic Net over Lasso?
+
+  (p.140) Lasso can behave erratically when #_features > #_training instances or there is correlation between features.
+  
+11. Suppose you want to classify pictres as outdoor/indoor and daytime/nighttime. Should you implement two Logistic Regression / one Softmax Regression classifier?
+
+Two logistic regression classifiers, one for O/I and another for D/N.
